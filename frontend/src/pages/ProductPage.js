@@ -30,9 +30,9 @@ const ProductPage = ({ match }) => {
             <ListGroup.Item>
               <h2>{product.name}</h2>
             </ListGroup.Item>
-            <ListGroup.item>
+            <ListGroup.Item>
               <Rating value={product.rating} text={`${product.numReviews} reviews`} />
-            </ListGroup.item>
+            </ListGroup.Item>
             <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
             <ListGroup.Item>Description: {product.description}</ListGroup.Item>
           </ListGroup>
@@ -40,21 +40,21 @@ const ProductPage = ({ match }) => {
         <Col md={3}>
           <Card>
             <ListGroup variant="flush">
-              <ListGroup.item>
+              <ListGroup.Item>
                 <Row>
                   <Col>Price:</Col>
                   <Col>
                     <strong>${product.price}</strong>
                   </Col>
                 </Row>
-              </ListGroup.item>
+              </ListGroup.Item>
 
-              <ListGroup.item>
+              <ListGroup.Item>
                 <Row>
                   <Col>Status:</Col>
                   <Col>{product.countInStock > 0 ? "In Stock" : "Out Of Stock"}</Col>
                 </Row>
-              </ListGroup.item>
+              </ListGroup.Item>
               <ListGroup.Item>
                 <Button className="btn-block" type="button" disabled={product.countInStock === 0}>
                   Add To Cart
