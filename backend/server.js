@@ -6,6 +6,7 @@ import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 
 import productRoutes from "./routes/productRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
+import orderRoutes from "./routes/orderRoutes.js";
 
 dotenv.config();
 
@@ -19,8 +20,9 @@ app.get("/", (req, res) => {
   res.send("API OK!");
 });
 
-app.use("/api/products", productRoutes); // adding the routes for the paths (express usage)
+app.use("/api/products", productRoutes); // adding the products routes for the paths (express usage)
 app.use("/api/users", userRoutes); // adding the user routes for the paths (express usage)
+app.use("/api/orders", orderRoutes); // adding the order routes for the paths (express usage)
 
 app.use(notFound);
 
