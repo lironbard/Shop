@@ -27,7 +27,7 @@ const OrderPage = ({ match }) => {
     if (!order || order._id !== orderId) {
       dispatch(getOrderDetails(orderId));
     }
-  }, [order, orderId]);
+  }, [dispatch, orderId]);
 
   return loading ? (
     <Loader />
@@ -60,7 +60,7 @@ const OrderPage = ({ match }) => {
               <h2>Payment Method</h2>
               <p>
                 <strong>Method: </strong>
-                {cart.paymentMethod}
+                {order.paymentMethod}
               </p>
               {order.isPaid ? <Message variant="success">Paid on {order.paidAt}</Message> : <Message variant="danger">Not Paid</Message>}
             </ListGroup.Item>
