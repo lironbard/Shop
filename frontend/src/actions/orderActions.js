@@ -79,7 +79,7 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
 };
 
 //--== Order creation action==--\\
-export const payOrder = (order, paymentResult) => async (dispatch, getState) => {
+export const payOrder = (orderId, paymentResult) => async (dispatch, getState) => {
   try {
     //Dispatch request\\
     dispatch({
@@ -97,7 +97,7 @@ export const payOrder = (order, paymentResult) => async (dispatch, getState) => 
       },
     };
 
-    const { data } = await axios.put(`/api/orders/${id}/pay`, paymentResult, config);
+    const { data } = await axios.put(`/api/orders/${orderId}/pay`, paymentResult, config);
 
     dispatch({
       type: ORDER_PAY_SUCCESS,

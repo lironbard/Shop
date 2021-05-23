@@ -24,6 +24,8 @@ app.use("/api/products", productRoutes); // adding the products routes for the p
 app.use("/api/users", userRoutes); // adding the user routes for the paths (express usage)
 app.use("/api/orders", orderRoutes); // adding the order routes for the paths (express usage)
 
+app.get("/api/config/paypal", (req, res) => res.send(process.env.PAYPAL_CLIENT_ID));
+
 app.use(notFound);
 
 app.use(errorHandler);
