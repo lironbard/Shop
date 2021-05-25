@@ -69,7 +69,7 @@ const PlaceOrderPage = ({ history }) => {
               {cart.paymentMethod}
             </ListGroup.Item>
 
-            <ListGroup.item>
+            <ListGroup.Item>
               <h2>Order Items</h2>
               {cart.cartItems.length === 0 ? (
                 <Message>Your cart is empty</Message>
@@ -92,7 +92,7 @@ const PlaceOrderPage = ({ history }) => {
                   ))}
                 </ListGroup>
               )}
-            </ListGroup.item>
+            </ListGroup.Item>
           </ListGroup>
         </Col>
         <Col md={4}>
