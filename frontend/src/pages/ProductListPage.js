@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { LinkContainer } from "react-router-bootstrap";
-import { Table, Button, Row, Col, Pagination } from "react-bootstrap";
+import { Table, Button, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
@@ -71,7 +71,7 @@ const ProductListPage = ({ history, match }) => {
         <Message variant="danger">{error}</Message>
       ) : (
         <>
-          <Table striped borderd hover responsive className="table-sm">
+          <Table striped bordered hover responsive className="table-sm">
             <thead>
               <tr>
                 <th>ID</th>
