@@ -28,7 +28,7 @@ export const listProducts =
   (keyword = "", pageNumber = "") =>
   async (dispatch) => {
     try {
-      dispatch([{ type: PRODUCT_LIST_REQUEST }]);
+      dispatch({ type: PRODUCT_LIST_REQUEST });
       //making the request using axios
       const { data } = await axios.get(`/api/products?keyword=${keyword}&pageNumber=${pageNumber}`);
 
@@ -47,7 +47,7 @@ export const listProducts =
 
 export const listProductDetails = (id) => async (dispatch) => {
   try {
-    dispatch([{ type: PRODUCT_DETAILS_REQUEST }]);
+    dispatch({ type: PRODUCT_DETAILS_REQUEST });
     //making the request using axios
     const { data } = await axios.get(`/api/products/${id}`);
 
@@ -190,7 +190,7 @@ export const createProductReview = (productId, review) => async (dispatch, getSt
 
 export const listTopProducts = () => async (dispatch) => {
   try {
-    dispatch([{ type: PRODUCT_TOP_REQUEST }]);
+    dispatch({ type: PRODUCT_TOP_REQUEST });
     //making the request using axios
     const { data } = await axios.get(`/api/products/top`);
 

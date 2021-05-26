@@ -31,7 +31,7 @@ export const productListReducer = (state = { products: [] }, action) => {
       return { loading: true };
     //the reducer gets the data and put the payload into products
     case PRODUCT_LIST_SUCCESS:
-      return { loading: false, userInfo: action.payload.products, pages: action.payload.pages, page: action.payload.page };
+      return { loading: false, products: action.payload.products, pages: action.payload.pages, page: action.payload.page };
     case PRODUCT_LIST_FAIL:
       return { loading: false, error: action.payload };
     default:
