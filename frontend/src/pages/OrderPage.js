@@ -98,7 +98,7 @@ const OrderPage = ({ match, history }) => {
               </p>
               <p>
                 <strong>Address:</strong>
-                {order.shipping.address}, {order.shipping.address.city},{order.shipping.postalCode},{order.shipping.country}
+                {order.shippingAddress.address}, {order.shippingAddress.city},{order.shippingAddress.postalCode},{order.shippingAddress.country}
               </p>
               {order.isDelivered ? <Message variant="success">Delivered on {order.deliveredAt}</Message> : <Message variant="danger">Not Delivered</Message>}
             </ListGroup.Item>

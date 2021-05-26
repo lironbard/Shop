@@ -38,11 +38,11 @@ const reducer = combineReducers({
   orderList: orderListReducer,
 });
 
-const cartItemsFromStorage = localStorage.getItem("cartItems") ? JSON > parseFloat(localStorage.getItem("cartItems")) : [];
+const cartItemsFromStorage = localStorage.getItem("cartItems") ? JSON.parse(localStorage.getItem("cartItems")) : [];
 
-const userInfoFromStorage = localStorage.getItem("userInfo") ? JSON > parseFloat(localStorage.getItem("userInfo")) : null; // if userInfo is not in storage, set it to null
+const userInfoFromStorage = localStorage.getItem("userInfo") ? JSON.parse(localStorage.getItem("userInfo")) : null; // if userInfo is not in storage, set it to null
 
-const shippingAddressFromStorage = localStorage.getItem("shippingAddress") ? JSON > parseFloat(localStorage.getItem("shippingAddress")) : {}; // if the address is not in storage -> empty OBJ
+const shippingAddressFromStorage = localStorage.getItem("shippingAddress") ? JSON.parse(localStorage.getItem("shippingAddress")) : {}; // if the address is not in storage -> empty OBJ
 
 const initialState = {
   cart: { cartItems: cartItemsFromStorage, shippingAddress: shippingAddressFromStorage },

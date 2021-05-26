@@ -59,7 +59,7 @@ const PlaceOrderPage = ({ history }) => {
               <h2>Shipping</h2>
               <p>
                 <strong>Address:</strong>
-                {cart.shipping.address}, {cart.shipping.address.city},{cart.shipping.postalCode},{cart.shipping.country}
+                {cart.shippingAddress.address}, {cart.shippingAddress.city},{cart.shippingAddress.postalCode},{cart.shippingAddress.country}
               </p>
             </ListGroup.Item>
 
